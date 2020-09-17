@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jkupidu_c195.calendarMainController">
+    <children>
+      <VBox layoutX="2.0" prefHeight="550.0" prefWidth="700.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="700.0">
+               <children>
+                  <Label text="Calendar" textFill="#5886d6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="700.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="weekly" mnemonicParsing="false" onAction="#viewButtonSelected" selected="true" text="Weekly" />
+                  <RadioButton fx:id="monthly" mnemonicParsing="false" onAction="#viewButtonSelected" text="Monthly" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="417.0" prefWidth="700.0">
+               <children>
+                  <TableView fx:id="calendar" prefHeight="399.0" prefWidth="660.0">
+                    <columns>
+                        <TableColumn fx:id="date" prefWidth="98.0" text="Date" />
+                      <TableColumn fx:id="description" prefWidth="125.0" text="Description" />
+                        <TableColumn fx:id="location" prefWidth="92.0" text="Location" />
+                        <TableColumn fx:id="customer" prefWidth="120.0" text="Customer" />
+                        <TableColumn fx:id="start" prefWidth="109.0" text="Start" />
+                        <TableColumn fx:id="end" prefWidth="115.0" text="End" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="700.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addButton" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#editButton" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#deleteButton" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backButton" text="Back" />
+               </children>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

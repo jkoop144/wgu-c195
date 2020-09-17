@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jkupidu_c195.addAppointmentController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="400.0">
+               <children>
+                  <Label text="Create an Appointment" textFill="#5a97c9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="163.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Customer" />
+                  <TableView fx:id="customerNames" prefHeight="116.0" prefWidth="167.0">
+                    <columns>
+                      <TableColumn fx:id="customerNameCol" prefWidth="164.0" text="Name" />
+                    </columns>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Contact" />
+                  <ComboBox fx:id="contact" onAction="#setLocation" prefHeight="27.0" prefWidth="167.0" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Location" />
+                  <TextField fx:id="location" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Date" />
+                  <DatePicker fx:id="date" prefHeight="27.0" prefWidth="167.0" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Time" />
+                  <ComboBox fx:id="time" prefHeight="27.0" prefWidth="167.0" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="409.0" text="( In locations Timezone )">
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label text="Type" />
+                  <ComboBox fx:id="type" prefHeight="27.0" prefWidth="167.0" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="400.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButton" text="Save" />
+                  <Button mnemonicParsing="false" onAction="#cancelButton" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets right="85.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
